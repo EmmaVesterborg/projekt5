@@ -50,7 +50,7 @@ header {
           transform: translateX(-50%);
   width: 80%;
   max-width: 800px;
-  background-color: #eee;
+  background-color: #FCFCFC;
   height: 60px;
   border-radius: 12px;
   overflow: hidden;
@@ -63,7 +63,7 @@ header {
 #progress-bar {
   height: 100%;
   width: 0%;
-  background-color: #4caf50;
+  background-color: #34CD52;
   -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
   position: relative;
@@ -74,7 +74,7 @@ header {
   position: absolute;
   width: 100%;
   text-align: center;
-  color: white;
+  color: #FCFCFC;
   font-weight: bold;
   line-height: 24px;
   font-size: 0.9rem;
