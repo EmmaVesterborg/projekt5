@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datasikkerhed</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/cky7rwa.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <script src="js/scenarios.js" defer></script>
+    <script src="https://kit.fontawesome.com/9bb8ab9cfb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+      <!-- Overskrift - går igen -->
+    <h1>DATASIKKERHED</h1>
+    </header>
+    <main>
+    <div class="scenes">
+        <!-- Start forside-->
+        <div id="start" class = "startside">
+             <button id="startbtn" aria-label="Start det interaktive læringsforløb">START</button>
+        </div>
+        <!-- Instrukser -->
+        <div id="instrukser" class="hidden"> 
+            <p>I dette interaktive læringsforløb bliver du stillet over for en række situationer, som mange medarbejdere kan opleve i løbet af en helt almindelig dag. <br> <br> Undervejs skal du træffe valg, der har betydning for, hvordan du og virksomheden håndterer datasikkerhed. <br> <br> Formålet er at gøre dig mere opmærksom på risici og god praksis – så du er bedre rustet til at beskytte både dine egne og virksomhedens data i hverdagen. <br> <br> Tag dig tid, vær nysgerrig, og husk: selv små valg kan have stor betydning.</p>
+            <button id="startbtn2" aria-label="Gå videre til første spørgsmål">
+                <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+            </button>
+        </div>
+        <!-- Spørgsmål 1 -->
+        <div id="sp1" class="hidden">
+            <img src="img/sceneone.svg" alt="baggrundsbillede af et kontor" class="imgsceneone">
+            <p>Klokken er 8:45, og du er netop mødt på arbejde. Da du åbner din computer, ser du denne mærkelige mail fra IT-SUPPORTEN:<br><br> Du mangler den nyeste opdatering. <br> Tryk på dette link, og få det klaret med det samme: <br> www.opdaternu.dk <br><br> Hvad gør du nu?</p>
+            <div class="svarmuligheder">
+                <button id="svar1.1">Rapportere mailen som en <br> phishing-mail, og gør mine <br> kollegaer opmærksomme.</button>
+                <button id="svar1.2">Klikker straks på linket for at <br> opdatere min computer</button>
+                <button id="svar1.3">Skynder mig at slette mailen, <br> og gør intet yderligere.</button>
+            </div>
+        </div>
+        <!-- Korrekt svar SP 1 -->
+        <div id="sp1korrekt" class="hidden">
+            <h2 class="h2korrekt">KORREKT</h2>
+            <p class="pkorrekt">Når du rapporterer en phishing-mail og advarer dine kollegaer, <br> hjælper du med at beskytte hele virksomheden. <br> <br> Det forhindrer, at andre falder i fælden, og giver IT mulighed for at reagere hurtigt. <br> Sikkerhed handler ikke kun om dig – det er et fælles ansvar.</p>
+            <button class="btnkorrekt" id="c4" aria-label="Gå videre til næste spørgsmål">Videre til næste spørgsmål</button>
+        </div>
+        <!-- Forkert svar SP 1 -->
+        <div id="sp1forkert1" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert">Når du klikker på et link i en phishing-mail, kan du uforvarende komme til at installere skadelig software på din computer, som f.eks. spyware eller ransomware <br><br>I en arbejdssammenhæng kan det have endnu større konsekvenser. Hvis du klikker på et phishing-link via din arbejdsmail eller arbejdscomputer, kan det give angriberen adgang til virksomhedens data, kundelister, økonomiske oplysninger eller interne systemer. <br> <br> Det kan føre til databrud, økonomisk svindel og tab af tillid fra både kunder og samarbejdspartnere.</p>
+            <button class="btnforkert" id="restartsp1" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+        <!-- Forkert svar SP 1 -->
+        <div id="sp1forkert2" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert">Det kan virke som en god løsning at ignorere og slette en mistænkelig mail - og det er bedre end at klikke på den. Men det stopper desværre ikke problemet. <br><br>Når du sletter en phishing-mail uden at rapportere den, mister virksomheden en vigtig mulighed for at reagere. Phishing-angreb er sjældent målrettet kun én person - ofte er det en hel gruppe af medarbejdere, der modtager samme mail. <br> <br> Hvis ingen rapporterer det, kan dine kollegaer falde i fælden, og så er skaden sket, selvom du selv var forsigtig.</p>
+            <button class="btnforkert" id="restartsp1.1" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+        <!-- Spørgsmål 2 -->
+        <div id="sp2" class="hidden">
+            <img src="img/scenetwo.svg" alt="baggrundsbillede af en computer med åben mail" class="imgsceneone">
+            <p>Klokken er nu 10:00, og du skal sende en fil med medarbejderoplysninger <br> til en ekstern samarbejdspartner. <br><br> Hvordan gør du nu?</p>
+            <div class="svarmuligheder">
+                <button id="svar2.1">Jeg sender filen fra min <br> private mailadresse, fordi jeg ikke kan få adgang til mit firmamail.</button>
+                <button id="svar2.2">Jeg vedhæfter filen <br> direkte i en almindelig <br> e-mail og sender den til samarbejdspartneren</button>
+                <button id="svar2.3">Jeg uploader filen til en krypteret <br> fildelingstjeneste, som virksomheden har godkendt, og sender et separat kodeord via SMS</button>
+            </div>
+        </div>
+        <!-- Korrekt svar SP 2 -->
+        <div id="sp2korrekt" class="hidden">
+            <h2 class="h2korrekt">KORREKT</h2>
+            <p class="pkorrekt">Dette er den sikreste løsning. <br> <br> Krypteret fildeling sikrer, at data ikke kan læses, hvis de opsnappes. Ved at sende adgangskoden separat (f.eks. via SMS) reducerer du risikoen for, at en uvedkommende får adgang til både fil og kode. <br><br> Det viser, at du tænker i dataminimering og risikobegrænsning – to kerneprincipper i GDPR og god IT-sikkerhed.</p>
+            <button class="btnkorrekt" id="c5" aria-label="Gå videre til næste spørgsmål">Videre til næste spørgsmål</button>
+        </div>
+        <!-- Forkert svar SP 2 -->
+        <div id="sp2forkert1" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert">Dette er en af de mest almindelige og farlige fejl. <br><br> En vedhæftet fil i en almindelig e-mail er ikke krypteret og kan potentielt læses af uvedkommende, fx hvis mailen havner det forkerte sted eller bliver opsnappet. <br><br> Hvis filen indeholder personfølsomme oplysninger, kan det føre til brud på GDPR og alvorlige konsekvenser for både afsender og modtager.</p>
+            <button class="btnforkert" id="restartsp2" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+        <!-- Forkert svar SP 2 -->
+        <div id="sp2forkert2" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert">Det er et alvorligt brud på datasikkerhed. Private mailkonti er ikke under virksomhedens kontrol, og der er ingen garanti for, at de er beskyttet korrekt (fx med totrinsgodkendelse, backup eller logning). <br> <br> Desuden er det lettere at komme til at sende til forkert modtager, og der er stor risiko for databrud. Du blander personlige og professionelle kanaler, hvilket hverken er sikkert eller professionelt.</p>
+            <button class="btnforkert" id="restartsp2.1" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+         <!-- Spørgsmål 3 -->
+         <div id="sp3" class="hidden">
+            <img src="img/scenethree.svg" alt="baggrundsbillede af en tændt computer i kontrast til et frokostbord" class="imgsceneone">
+            <p>Klokken er blevet 12:00, og du er blevet sulten. <br><br>  Du forlader din computer i 20 min, for at spise mad i virksomhedens kantine. <br><br> Hvad gør du? </p>
+            <div class="svarmuligheder">
+                <button id="svar3.1">Jeg lader skærmen stå åben</button>
+                <button id="svar3.2">Jeg låser skærmen, <br> inden jeg gãr til frokost</button>
+                <button id="svar3.3">Jeg lader en kollega <br> låne min computer <br> mens jeg er til frokost </button>
+            </div>
+        </div>
+        <!-- Korrekt svar SP 3 -->
+        <div id="sp3korrekt" class="hidden">
+            <h2 class="h2korrekt">KORREKT</h2>
+            <p class="pkorrekt">Ved at låse skærmen beskytter du dine data mod uautoriseret adgang <br> - selv når du er væk i kort tid. <br><br> Det er en enkel og effektiv vane, der forebygger mange sikkerhedsfejl.</p>
+            <button class="btnkorrekt" id="c6" aria-label="Gå videre til næste spørgsmål">Videre til næste spørgsmål</button>
+        </div>
+        <!-- Forkert svar SP 3 -->
+        <div id="sp3forkert1" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert"> Hvis du går fra din computer uden at låse skærmen, kan andre tilgå dine systemer, læse følsomme mails eller sende noget i dit navn. <br><br> Det er et simpelt men alvorligt brud på god praksis for datasikkerhed.</p>
+            <button class="btnforkert" id="restartsp3" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+        <!-- Forkert svar SP 3 -->
+        <div id="sp3forkert2" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert">Deling af en computer uden kontrol over, hvem der bruger hvad, undergraver ansvarsfordelingen og sikkerheden. <br><br> Alle medarbejdere bør have deres egne loginoplysninger og begrænset adgang <br> – både af hensyn til sikkerhed og sporbarhed.</p>
+            <button class="btnforkert" id="restartsp3.1" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+        <!-- Spørgsmål 4 -->
+        <div id="sp4" class="hidden">
+            <img src="img/scenefour.svg" alt="baggrundsbillede af et hjemmekontor" class="imgsceneone">
+            <p>Klokken er nu 13:00, og du har besluttet dig for at arbejde hjemme resten af dagen. <br><br> Du skal nu logge på virksomhedens system hjemmefra. <br><br> Hvad gør du? </p>
+            <div class="svarmuligheder">
+                <button id="svar4.1">Jeg logger direkte på <br> via mit eget wifi</button>
+                <button id="svar4.2">Jeg tilslutter mig en VPN <br> inden jeg logger på</button>
+                <button id="svar4.3">Jeg gemmer mine adgangskoder <br> i browseren</button>
+            </div>
+        </div>
+        <!-- Korrekt svar SP 4 -->
+        <div id="sp4korrekt" class="hidden">
+            <h2 class="h2korrekt">KORREKT</h2>
+            <p class="pkorrekt">En VPN (Virtual Private Network) krypterer din internetforbindelse og sikrer, at dine data ikke kan læses af andre, selv på usikre netværk. <br><br> Det er den bedste praksis, når du arbejder hjemme eller fra steder med ukendte netværk.</p>
+            <button class="btnkorrekt" id="c7" aria-label="Gå videre til næste spørgsmål">Videre til næste spørgsmål</button>
+        </div>
+        <!-- Forkert svar SP 4 -->
+        <div id="sp4forkert1" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert">At logge på virksomhedens system via et usikret wifi-netværk (fx et åbent netværk uden adgangskode) udsætter dine data for fare. <br><br>Data, du sender og modtager, kan potentielt opsnappes af uvedkommende, hvilket kan føre til databrud. <br><br> Offentlige netværk er ofte mål for cyberangreb.</p>
+            <button class="btnforkert" id="restartsp4" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+        <!-- Forkert svar SP 4 -->
+        <div id="sp4forkert2" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert">Selvom det virker praktisk, er det ikke sikkert at gemme adgangskoder i browseren,<br> især hvis computeren deles med andre eller ikke er tilstrækkeligt beskyttet. <br><br>En hacker med adgang til din enhed kan nemt finde og misbruge dem.<br><br>Brug en godkendt password manager i stedet.</p>
+            <button class="btnforkert" id="restartsp4.1" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+        <!-- Spørgsmål 5 -->
+        <div id="sp5" class="hidden">
+            <img src="img/scenefive.svg" alt="baggrundsbillede af en computer der har programmet Teams åbent" class="imgsceneone">
+            <p>Klokken er 14:45, og du modtager en besked via Teams fra jeres nye praktikant, <br> der spørger, om du vil give adgang til en delt mappe <br><br> Hvad gør du? </p>
+            <div class="svarmuligheder">
+                <button id="svar5.1">Jeg deler adgangen uden <br> at tjekke med min chef</button>
+                <button id="svar5.2">Jeg sender kodeordet <br> til mappen via sms</button>
+                <button id="svar5.3">Jeg beder min chef <br> om godkendelse først</button>
+            </div>
+        </div>
+        <!-- Korrekt svar SP 5 -->
+        <div id="sp5korrekt" class="hidden">
+            <h2 class="h2korrekt">KORREKT</h2>
+            <p class="pkorrekt">God praksis er at involvere en ansvarlig (fx chef eller IT-administrator), før der gives adgang. <br><br>Det sikrer korrekt rettighedsstyring og dokumentation af, hvem der har adgang til hvad.</p>
+            <button class="btnkorrekt" id="c8" aria-label="Gå videre til næste spørgsmål">Videre til næste spørgsmål</button>
+        </div>
+        <!-- Forkert svar SP 5 -->
+        <div id="sp5forkert1" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert">At give adgang uden at kontrollere, om personen må få det, kan føre til utilsigtet adgang til følsomme data. <br><br> Det strider mod princippet om mindste nødvendige rettighed (least privilege) <br>– ingen bør have adgang til mere end det, de har brug for.</p>
+            <button class="btnforkert" id="restartsp5" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+        <!-- Forkert svar SP 5 -->
+        <div id="sp5forkert2" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert">Selvom det kan virke hurtigt, er SMS ikke en sikker kanal til at sende kodeord. <br><br>Beskeder kan opsnappes eller læses af andre. <br><br>Brug i stedet en sikker adgangsmetode som password manager eller virksomhedsplatform med indbygget adgangsstyring.</p>
+            <button class="btnforkert" id="restartsp5.1" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+        <!-- Spørgsmål 6 -->
+        <div id="sp6" class="hidden">
+            <img src="img/scenesix.svg" alt="baggrundsbillede af et roddet skrivebord sidst på dagen" class="imgsceneone">
+            <p>Klokken er blevet 16:00, og du har faktisk fået fri, MEN lige inden du skal til at pakke sammen modtager du en besked om, at din konto har været forsøgt tilgāet. <br><br> Hvad gør du? </p>
+            <div class="svarmuligheder">
+                <button id="svar6.1">Jeg skifter kode<br> og aktivere straks 2FA</button>
+                <button id="svar6.2">Jeg tænker, at det kan vente <br> til i morgen og ignorerer det</button>
+                <button id="svar6.3">Jeg slår det op i min <br> private facebookgruppe <br> for at fã gode råd</button>
+            </div>
+        </div>
+        <!-- Korrekt svar SP 6 -->
+        <div id="sp6korrekt" class="hidden">
+            <h2 class="h2korrekt">KORREKT</h2>
+            <p class="pkorrekt">Det er korrekt at reagere hurtigt og ændre dit kodeord. <br><br>Hvis du ikke allerede har aktiveret to-faktor-godkendelse (2FA), bør du gøre det – det tilføjer et ekstra lag sikkerhed, som kan stoppe angriberen i at få adgang selv med dit kodeord.</p>
+            <button class="btnkorrekt" id="c9" aria-label="Gå videre til næste spørgsmål">AFSLUT</button>
+        </div>
+        <!-- Forkert svar SP 6 -->
+        <div id="sp6forkert1" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert">At ignorere et advarselssignal kan føre til, at et brud bliver opdaget for sent. <br><br>En mistænkelig aktivitet bør altid undersøges og håndteres, <br>da det kan være tegn på et igangværende angreb eller databrud.</p>
+            <button class="btnforkert" id="restartsp6" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+        <!-- Forkert svar SP 6 -->
+        <div id="sp6forkert2" class="hidden">
+            <h2 class="h2forkert">FORKERT</h2>
+            <p class="pforkert">Det er farligt og uprofessionelt at diskutere sikkerhedsbrud <br> i åbne eller private sociale medier. <br><br> Du risikerer at dele følsomme oplysninger offentligt. <br><br>Henvend dig altid direkte til virksomhedens IT- eller sikkerhedsansvarlige.</p>
+            <button class="btnforkert" id="restartsp6.1" aria-label="Prøv igen – gå tilbage til spørgsmålet">Prøv igen</button>
+        </div>
+        <!-- Afslutning -->
+        <div id="afslutning" class="hidden">
+            <p>Tillykke <br><br> Du har nu gennemført en hel arbejdsdag med fokus på datasikkerhed og stået over for realistiske situationer, som mange medarbejdere møder i hverdagen. <br><br>Måske var nogle af valgene nemme – og andre lidt sværere. <br><br> Det vigtigste er, at du nu er bedre rustet til at spotte risici, træffe sikre valg <br> og tænke datasikkerhed ind i dine daglige rutiner. <br><br>Husk, at god datasikkerhed ikke handler om at kunne alt, men om at være opmærksom, spørge om hjælp – og reagere ansvarligt, når noget virker forkert.</p>
+            <button id="forfra">Vil du starte forfra?</button>
+        </div>
+    </div>
+    </main>
+    <footer>
+    <!-- Progress-bar - går igen -->
+    <div id="progress-container">
+        <div id="progress-bar">
+          <span id="progress-text"></span>
+        </div>
+      </div>
+      </footer>
+</body>
+</html>
